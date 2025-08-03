@@ -1,3 +1,4 @@
+import React from "react";  
 import type { ComponentProps } from "react";
 import { cx } from "../../lib/cx.ts";
 import styles from "./button.module.css";

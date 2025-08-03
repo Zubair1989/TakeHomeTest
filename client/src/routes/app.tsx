@@ -1,3 +1,4 @@
+import React from "react"; 
 import { useEffect, useState } from "react";
 import { Header } from "../components/header/header.tsx";
 import { Insights } from "../components/insights/insights.tsx";
@@ -6,9 +7,11 @@ import type { Insight } from "../schemas/insight.ts";
 
 export const App = () => {
   const [insights, setInsights] = useState<Insight>([]);
+  const baseUrl = import.meta.env.VITE_SERVER_BASE_URL;
+  const serverport = import.meta.env.VITE_SERVER_PORT;
 
   useEffect(() => {
-    fetch(`/api/insights`).then((res) => setInsights(res.json()));
+    fetch(`${baseUrl}:${serverport}/insights`).then((res) => setInsights(res.json()));
   }, []);
 
   return (
@@ -18,3 +21,4 @@ export const App = () => {
     </main>
   );
 };
+

@@ -5,9 +5,9 @@ import { defineConfig, searchForWorkspaceRoot } from "vite";
 import process from "node:process";
 
 const env = {
-  clientPort: Port.parse(Deno.env.get("CLIENT_PORT")),
-  servereBaseUrl: String(Deno.env.get("SERVER_BASE_URL")),
-  serverPort: Port.parse(Deno.env.get("SERVER_PORT")),
+  clientPort: Port.parse(Deno.env.get("VITE_CLIENT_PORT")),
+  servereBaseUrl: String(Deno.env.get("VITE_SERVER_BASE_URL")),
+  serverPort: Port.parse(Deno.env.get("VITE_SERVER_PORT")),
 };
 
 export default defineConfig({

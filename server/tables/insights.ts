@@ -1,3 +1,6 @@
+// Create/open database
+//const db = new DB("tmp/db.sqlite3");
+
 export const createTable = `
   CREATE TABLE insights (
     id INTEGER PRIMARY KEY ASC NOT NULL,

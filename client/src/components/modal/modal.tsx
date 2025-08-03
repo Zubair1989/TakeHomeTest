@@ -1,3 +1,4 @@
+import React from "react";  
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { XIcon } from "lucide-react";
 import type { ReactNode } from "react";
